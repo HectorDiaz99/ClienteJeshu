@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav {
+    padding: 15px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    background-color: #ccc;
+}
+.logo{
+    color: rgb(168, 36, 185);
+    float: right;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+#bar {
+    list-style-type: none;
+    display: flex; 
+    align-items: center; /* Alinea verticalmente los items */
+    gap: 15px; /* Espacio entre los items */
+}
+
+#bar li {
+    margin: 0 10px;
+}
+
+.logo:hover{
+    color: rgb(156, 54, 54);
+}
+
+.item {
+    transition: color 0.3s;
+    padding: 23px 10px;
+    color: #666;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+#bar li a:hover {
+    color: #000;
+}
+#bar li a:active{
+    background-color: #8b8a8a;
+    width: 100%;
+}
+.ham {
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.ham span{
+    display: block;
+    background-color: #000;
+    height: 3px;
+    width: 28px;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+
+
+ @media only screen and (max-width : 600px) {
+    .logo{
+        padding: 0 0 0 25px;
+    }
+    .ham {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 0;
+    }
+
+    #bar{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 40vh;
+        margin: 0;
+        padding: 10px 0 0 0;
+        width: 100%;
+        display: none;
+    }
+    /* Cambios en JavaScript */
+    #bar.activado {
+        display: flex;
+    }
+
+    #bar li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .br-1.animado{
+        rotate: 50deg;
+        translate: -10px 8px;
+    }
+    .br-2.animado{
+        visibility: hidden;
+    }
+    .br-3.animado{
+        rotate: -50deg;
+        translate: -10px -8px;
+    }
+    
+}
+
