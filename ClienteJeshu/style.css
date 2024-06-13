@@ -10,10 +10,11 @@ nav {
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
     background-color: #ccc;
 }
-.logo{
+
+.logo {
     color: rgb(168, 36, 185);
     float: right;
     text-decoration: none;
@@ -22,16 +23,18 @@ nav {
 
 #bar {
     list-style-type: none;
-    display: flex; 
-    align-items: center; /* Alinea verticalmente los items */
-    gap: 15px; /* Espacio entre los items */
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente los items */
+    gap: 15px;
+    /* Espacio entre los items */
 }
 
 #bar li {
     margin: 0 10px;
 }
 
-.logo:hover{
+.logo:hover {
     color: rgb(156, 54, 54);
 }
 
@@ -46,10 +49,12 @@ nav {
 #bar li a:hover {
     color: #000;
 }
-#bar li a:active{
+
+#bar li a:active {
     background-color: #8b8a8a;
     width: 100%;
 }
+
 .ham {
     display: none;
     cursor: pointer;
@@ -58,7 +63,8 @@ nav {
     padding: 0;
     background-color: transparent;
 }
-.ham span{
+
+.ham span {
     display: block;
     background-color: #000;
     height: 3px;
@@ -68,10 +74,11 @@ nav {
 }
 
 
- @media only screen and (max-width : 600px) {
-    .logo{
+@media only screen and (max-width : 600px) {
+    .logo {
         padding: 0 0 0 25px;
     }
+
     .ham {
         display: block;
         position: absolute;
@@ -79,13 +86,13 @@ nav {
         right: 25px;
     }
 
-    nav{
+    nav {
         flex-direction: column;
         align-items: flex-start;
         padding: 25px 0;
     }
 
-    #bar{
+    #bar {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -95,27 +102,29 @@ nav {
         width: 100%;
         display: none;
     }
+
     /* Cambios en JavaScript */
     #bar.activado {
         display: flex;
     }
 
-    #bar li{
+    #bar li {
         width: 100%;
         text-align: center;
     }
 
-    .br-1.animado{
+    .br-1.animado {
         rotate: 50deg;
         translate: -10px 8px;
     }
-    .br-2.animado{
+
+    .br-2.animado {
         visibility: hidden;
     }
-    .br-3.animado{
+
+    .br-3.animado {
         rotate: -50deg;
         translate: -10px -8px;
     }
-    
-}
 
+}
