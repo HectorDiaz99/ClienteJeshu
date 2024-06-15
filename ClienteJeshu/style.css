@@ -3,7 +3,26 @@
     padding: 0;
 }
 
-
+body {
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Montserrat", sans-serif;
+}
+header{
+    width: 100%;
+}
+.postnav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
 
 nav {
     padding: 15px;
@@ -12,6 +31,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     background-color: #ccc;
+    font-family: "Playwrite AU VIC", sans-serif;
 }
 
 .logo {
@@ -73,8 +93,32 @@ nav {
     border-radius: 10px;
 }
 
+.tazas{
+    margin: 20px 10px 0 10px;
+}
 
-@media only screen and (max-width : 600px) {
+.tazas .imagen img{
+    margin: 20px 6px 0 0;
+    width: 150px;
+    height: 200px;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titulo a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+
+/* Mobiles */
+
+
+@media only screen and (max-width : 800px) {
     .logo {
         padding: 0 0 0 25px;
     }
@@ -89,7 +133,7 @@ nav {
     nav {
         flex-direction: column;
         align-items: flex-start;
-        padding: 25px 0;
+        padding: 15px 0;
     }
 
     #bar {
@@ -109,6 +153,7 @@ nav {
     }
 
     #bar li {
+        padding: 0 100px;
         width: 100%;
         text-align: center;
     }
